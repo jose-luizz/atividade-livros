@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Biblioteca de livros</h1>
+    <button onclick="livroController.adicionarLivros()">Adicionar livro</button>
+
+    <button onclick="livroController.listarLivros()">Listar livros</button>
+
+<ul id="listaLivros"></ul>
+
+<script src="../repositories/livroRepository.js"></script>
+<script src="../services/livroService.js"></script>
+<script src="../controllers/livroController.js"></script>
+
+
+</body>
+</html> 
