@@ -8,6 +8,12 @@ const livroController = {
         livros.forEach(livro => {
             const item = document.createElement("li");
             item.textContent = `${livro.titulo} - ${livro.autor}`;
+            
+            const botao = document.createElement("button");
+            botao.textContent = "Excluir";
+            botao.onclick = () => livroController.excluirLivro(livro.id);
+
+            item.appendChild(botao);
             lista.appendChild(item);
         })
     },
@@ -18,6 +24,10 @@ const livroController = {
 
     livroService.adicionar({titulo, autor});
     
+  },
+  excluirLivro: (id) => {
+    livroService.excluir(id);
+    livroController.listarLivros();
   }
   
 }

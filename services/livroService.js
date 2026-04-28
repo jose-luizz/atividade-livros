@@ -10,5 +10,8 @@ adicionar: (livro) => {
 
     return livroRepository.salvar(livro);  
 
+    },
+    excluir: (id) => {
+        return livroRepository.excluir(id);
     }
 }; 
